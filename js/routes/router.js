@@ -10,7 +10,10 @@ app.Router = Backbone.Router.extend({
 		'tantalizingTulips': 'tantalizingTulipsMessage',
 		'fleurDelis': 'fleurDelisMessage'
 	},
-
+	
+	/**
+	 * Simple Route Message
+	 */
 	noCopy: function() {
 		$('#copy').html('');
 	},

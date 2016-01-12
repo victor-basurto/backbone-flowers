@@ -1,6 +1,8 @@
 var app = app || {}; // name of the app
 
-// Single Model
+/**
+ * Single Flower Model
+ */
 app.singleFlower = Backbone.Model.extend({
 	defaults: {
 		color: 'pink',
@@ -22,6 +24,9 @@ app.singleFlower = Backbone.Model.extend({
 	}*/
 });
 
+/**
+ * Erupean Flower Model
+ */
 app.europeanFlower = Backbone.Model.extend({
 	// default values
 	defaults: {

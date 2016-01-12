@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="site">
+		<div class="logo">
+			<img src="./images/site/logo.png" alt="hansel and petal" width="207" height="124">
+		</div>
+
+	
+		<!-- group of flowers -->
+		<div id="allFlowers">
+			<!-- Backbone Template -->
+			<script id="flowerElement" type="text/template">
+				<a href="#<%= link %>"><img src="<%= img %>" atl="<%= name %>" class="image"/></a>
+				<ul>
+					<li class="flowerInfo">Name: <%= name %></li>
+					<li class="flowerInfo">Price: <%= price %></li>
+					<li class="flowerInfo">Color: <%= color %></li>
+				</ul>
+			</script>
+		</div>
+
+		<div id="copy"></div>
+
+		<div id="more-flowers">
+			<!-- Backbone Template -->
+			<script id="extra-flowers" type="text/template">
+				<a href="#<%= link %>"><img src="<%= img %>" alt="<%= name %>" class="image"/></a>
+				<ul>
+					<li class="flowerInfo">Country: <%= originCountry %></li>
+					<li class="flowerInfo">Name: <%= name %></li>
+					<li class="flowerInfo">Price: <%= price %></li>
+					<li class="flowerInfo">Color: <%= color %></li>
+				</ul>	
+			</script>
+		</div>
+	</div>
+
+
+
+
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>			<!-- jquery -->
+	<script src="./bower_components/underscore/underscore.js"></script>				<!-- underscore -->
+	<script src="./bower_components/backbone/backbone-min.js"></script>				<!-- backbone-->
+	<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>	<!-- bootstrap -->
+
+	<script src="./js/models/singleFlowerModel.js"></script>			<!-- Single Model -->
+	<script src="./js/views/singleFlowerView.js"></script>		<!-- Single View -->
+	<script src="./js/views/allFlowersView.js"></script>		<!-- All Flowers View -->
+	<script src="./js/collections/allFlowers.js"></script>		<!-- Collection Model -->
+	<script src="./js/routes/router.js"></script>				<!-- Router -->
+	<script src="./js/flowerApp.js"></script>					<!-- Execution -->
+</body>
+</html>

@@ -1,4 +1,7 @@
-// instantiation
+/**
+ * Instantiation
+ */
+// Red Roses
 var redRoses = new app.singleFlower({
 	name: 'Red Roses',
 	price: 39.95,
@@ -7,6 +10,7 @@ var redRoses = new app.singleFlower({
 	link: 'redRose'
 });
 
+// Rainbow Roses
 var rainbowRoses = new app.singleFlower({
 	name: 'Rainbow Roses',
 	price: 29.95,
@@ -14,6 +18,7 @@ var rainbowRoses = new app.singleFlower({
 	link: 'rainbowRose'
 });
 
+// Heirloom Roses
 var heirloomRoses = new app.singleFlower({
 	name: 'Heirloom Roses',
 	price: 19.95,
@@ -21,6 +26,7 @@ var heirloomRoses = new app.singleFlower({
 	link: 'heirloomRose'
 });
 
+// Tantalizing Tulips Roses
 var tantalizingTulips = new app.europeanFlower({
 	originCountry: 'Holland',
 	name: 'Tantalizing Tulips',
@@ -30,6 +36,7 @@ var tantalizingTulips = new app.europeanFlower({
 	link: 'tantalizingTulips'
 });
 
+// Fleur De Lis Roses
 var fleurDelis = new app.europeanFlower({
 	originCountry: 'Holland',
 	name: 'Fleur-de-lis',
@@ -39,35 +46,29 @@ var fleurDelis = new app.europeanFlower({
 	link: 'fleurDelis'
 });
 
-// create a collection
+// flowers collection array
 var flowerGroup = new app.FlowerCollection([
 	redRoses, rainbowRoses, heirloomRoses
 ]);
 
-// create collection
+// euro-flowers collection array
 var europeanFlowerGroup = new app.EuropeanFlower([
 	fleurDelis, tantalizingTulips
 ]);
 
 // pass collection to flowerGroup
 var flowerGroupView = new app.AllFlowersView({ collection: flowerGroup });
-
-// render the view
-$('#allFlowers').html(flowerGroupView.render().el);
+$('#allFlowers').html(flowerGroupView.render().el);		// render the collection
 
 
 // render the european flowers
 var euroFlowerGroupView = new app.AllEuroFlowersView({ collection: europeanFlowerGroup });
-$('#more-flowers').html(euroFlowerGroupView.render().el);
+$('#more-flowers').html(euroFlowerGroupView.render().el);	// render the collection
 
-
-// tantalizingTulips.set('originCoutry', 'Holland');
-// fleurDelis.set('originCoutry', 'Holland');
-
+// test your collection
 console.log(flowerGroup.toJSON());
 console.log(europeanFlowerGroup.toJSON());
 
 // keep history
 var flowerRouter = new app.Router();
-
 Backbone.history.start();
